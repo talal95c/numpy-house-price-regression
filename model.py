@@ -89,8 +89,19 @@ def append_column(X, col):
 
     return np.concatenate([X,col],axis=1)
 
-# Step 6 - one_hot_encode (not yet solved)
-# TODO: implement
+# Step 6 - one_hot_encode
+def one_hot_encode(labels):
+    labels = np.asarray(labels).reshape(-1)
+
+    unique = np.unique(labels)
+
+    one_hot = np.zeros((labels.shape[0], unique.shape[0]), dtype=float)
+
+    for i, label in enumerate(labels):
+        j = np.where(unique == label)[0][0]
+        one_hot[i, j] = 1.0
+
+    return one_hot
 
 # Step 7 - fit_standardizer (not yet solved)
 # TODO: implement
