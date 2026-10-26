@@ -61,8 +61,8 @@ def clip_columns(X, lower, upper):
     lower = np.asarray(lower,dtype=float)
     upper = np.asarray(upper,dtype=float)
 
-    X = np.clip(X,lower,upper)
-    return X
+    X_clip = np.clip(X,lower,upper)
+    return X_clip
 
 # Step 4 - make_ratio_feature (not yet solved)
 # TODO: implement
