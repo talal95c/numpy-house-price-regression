@@ -64,8 +64,21 @@ def clip_columns(X, lower, upper):
     X_clip = np.clip(X,lower,upper)
     return X_clip
 
-# Step 4 - make_ratio_feature (not yet solved)
-# TODO: implement
+# Step 4 - make_ratio_feature
+def make_ratio_feature(numerator, denominator, eps=1e-8):
+    # TODO: Form a derived ratio feature from two 1-D arrays with safe division.
+    pass
+
+
+    numerator = np.asarray(numerator,dtype=float)
+    denominator=np.asarray(denominator,dtype=float)
+
+    if numerator.shape== denominator.shape:
+        denominator += eps
+        return numerator / denominator
+    
+    else :
+        return None
 
 # Step 5 - append_column (not yet solved)
 # TODO: implement
