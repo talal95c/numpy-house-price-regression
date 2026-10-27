@@ -187,10 +187,7 @@ def ols_fit(X, y):
     X = np.asarray(X,dtype=float)
     y = np.asarray(y,dtype=float)
 
-    GramMatrix = X.T @ X
-    rightMatrix = X.T @ y 
-    Gram_inv = np.linalg.inv(GramMatrix)
-    theta = Gram_inv @ rightMatrix
+    theta = np.linalg.pinv(X) @ y
     return theta
 
 # Step 14 - ols_predict
