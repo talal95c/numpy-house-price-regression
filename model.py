@@ -357,8 +357,8 @@ def standardize_and_add_bias(splits):
 def evaluate_predictions(y_true, y_pred):
     # TODO: Bundle MAE, RMSE, R^2, and residual summary into one metrics dict.
     
-    y_true = np.asarray(y_true,dtype=float)
-    y_pred = np.asarray(y_pred,dtype=float)
+    y_true = np.asarray(y_true,dtype=float).flatten()
+    y_pred = np.asarray(y_pred,dtype=float).flatten()
 
 
     e = y_true - y_pred
