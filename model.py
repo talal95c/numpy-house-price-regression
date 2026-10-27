@@ -43,14 +43,14 @@ def compute_iqr_bounds(X, k=1.5):
 
     iqr = q3 - q1 
 
-    upper = q1 - k * iqr
-    lower = q3 + k * iqr 
+    lower = q1 - k * iqr
+    upper = q3 + k * iqr 
 
 
     
 
 
-    return (upper,lower)
+    return (lower,upper)
 
 # Step 3 - clip_columns
 def clip_columns(X, lower, upper):
