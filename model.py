@@ -193,8 +193,15 @@ def ols_fit(X, y):
     theta = Gram_inv @ rightMatrix
     return theta
 
-# Step 14 - ols_predict (not yet solved)
-# TODO: implement
+# Step 14 - ols_predict
+def ols_predict(X, theta):
+    # TODO: Predict continuous targets with a fitted linear model.
+    pass
+
+    X = np.asarray(X,dtype=float)
+    theta = np.asarray(theta)
+
+    return X @ theta
 
 # Step 15 - mean_absolute_error (not yet solved)
 # TODO: implement
